@@ -27,6 +27,7 @@
                 deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis
                 accusamus dolores!</p>
             <p>Ciao a tutti sono gabriel</p>
+            <p>Ciao sono Chiara</p>
         </div>
     </div>
 @endsection
