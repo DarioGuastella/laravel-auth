@@ -28,6 +28,7 @@
                 accusamus dolores!</p>
             <p>Ciao a tutti sono gabriel</p>
             <p>Ciao sono Chiara</p>
+            <p>Ciao sono Dario</p>
         </div>
     </div>
 @endsection
