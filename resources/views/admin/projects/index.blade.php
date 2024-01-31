@@ -12,8 +12,9 @@
                         <a href="{{ route('admin.projects.show', $project->id) }}"><img src="{{ $project->image }}"
                                 class="comics-img w-25" alt="{{ $project->title }}">
                         </a>
+                        <div class="card-body">{{ $project->topic }}</div>
                     </div>
-                    <div class="card-body">{{ $project->topic }}</div>
+
                     <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-primary">Show details</a>
                     <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-info">Edit</a>
 
