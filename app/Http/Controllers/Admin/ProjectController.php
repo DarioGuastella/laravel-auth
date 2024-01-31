@@ -61,7 +61,7 @@ class ProjectController extends Controller
         $progetto->fill($dati_validati);
         $progetto->save();
 
-        return redirect()->route("comics.show", $progetto->id);
+        return redirect()->route("admin.projects.show", $progetto->id);
     }
 
     /**

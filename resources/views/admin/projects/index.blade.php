@@ -3,13 +3,14 @@
 @section('content')
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
+
             @foreach ($projects as $project)
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-header">{{ $project->title }}</div>
                         <div class="card-body">{{ $project->description }}</div>
                         <a href="{{ route('admin.projects.show', $project->id) }}"><img src="{{ $project->image }}"
-                                class="comics-img" alt="{{ $project->title }}">
+                                class="comics-img w-25" alt="{{ $project->title }}">
                         </a>
                     </div>
                     <div class="card-body">{{ $project->topic }}</div>
@@ -23,8 +24,9 @@
                         <input type="submit" value="Delete" class="btn btn-danger">
                     </form>
                 </div>
+            @endforeach
+
+
         </div>
-        @endforeach
-    </div>
     </div>
 @endsection
