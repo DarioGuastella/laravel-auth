@@ -9,8 +9,9 @@
                     <div class="card">
                         <div class="card-header">{{ $project->title }}</div>
                         <div class="card-body">{{ $project->description }}</div>
-                        <a href="{{ route('admin.projects.show', $project->id) }}"><img src="{{ $project->image }}"
-                                class="comics-img w-25" alt="{{ $project->title }}">
+                        <a class="d-flex justify-content-center" href="{{ route('admin.projects.show', $project->id) }}"><img
+                                src="{{ $project->image }}" class="comics-img w-25 align-self-center"
+                                alt="{{ $project->title }}">
                         </a>
                         <div class="card-body">{{ $project->topic }}</div>
                         <div class="d-flex justify-content-center">
