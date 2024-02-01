@@ -13,17 +13,21 @@
                                 class="comics-img w-25" alt="{{ $project->title }}">
                         </a>
                         <div class="card-body">{{ $project->topic }}</div>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ route('admin.projects.show', $project->id) }}"
+                                class="btn btn-primary mx-2 mb-2">Show
+                                details</a>
+                            <a href="{{ route('admin.projects.edit', $project->id) }}"
+                                class="btn btn-info mx-2 mb-2">Edit</a>
+                            <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST"
+                                class="d-inline-block mx-2 mb-2">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="Delete" class="btn btn-danger">
+                            </form>
+                        </div>
+
                     </div>
-
-                    <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-primary">Show details</a>
-                    <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-info">Edit</a>
-
-                    <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST"
-                        class="d-inline-block">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value="Delete" class="btn btn-danger">
-                    </form>
                 </div>
             @endforeach
 
